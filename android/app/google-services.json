@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "565864761647",
+    "firebase_url": "https://auctionax-f2e3d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "auctionax-f2e3d",
+    "storage_bucket": "auctionax-f2e3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565864761647:android:5ed78ab664ce6fc90ef9da",
+        "android_client_info": {
+          "package_name": "th.co.auctionexpress.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565864761647-kir319qcp7nlln66jcvhb49mj0qm25c3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ06SWHtDYdqVWb8umaknB78ehhwbbVgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565864761647-kir319qcp7nlln66jcvhb49mj0qm25c3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "565864761647-rg3oi7j2olupbo7jdadbgln1slktnp3b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "th.co.auctionexpress.mobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
