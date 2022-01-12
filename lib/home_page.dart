@@ -1,30 +1,35 @@
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:nextflow_firebase_realtime_db_chat/auction_provider.dart';
+import 'package:nextflow_firebase_realtime_db_chat/models/auction_sequence_car.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
+
+  AuctionProvider provider = new AuctionProvider();
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  FirebaseDatabase database = FirebaseDatabase.instance;
   @override
   Widget build(BuildContext context) {
-    DatabaseReference ref =
-        FirebaseDatabase.instance.ref("dev/auction_sequence");
-    var stream = ref.onValue;
-    stream.listen((DatabaseEvent event) {
-      print('Event Type: ${event.type}');
-      print('Snapshot: ${event.snapshot}');
-    });
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Auction'),
+    return StreamProvider(
+      initialData: AuctionSequenceCar(),
+      create: (context) {
+        return widget.provider.stream();
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Auction'),
+        ),
+        body: Consumer<AuctionSequenceCar>(
+          builder: (context, value, child) {
+            return ListView();
+          },
+        ),
       ),
-      body: Container(),
     );
   }
 }
